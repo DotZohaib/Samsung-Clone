@@ -1,0 +1,630 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,500;1,200;1,400;1,600&family=Source+Code+Pro:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  
+  width: 100vw;
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+  /* border: 2px solid yellow; */
+}
+#full_body{
+  
+  width: 100vw;
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+  /* border: 2px solid yellow; */
+}
+/* body {
+  width: 100vw;
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+  border: 2px solid yellow;
+} */
+#nav {
+  /* background-color: aqua; */
+  align-items: center;
+  /* justify-content: space-between; */
+  font-family: "Poppins", sans-serif;
+}
+ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  margin-left: 22px;
+}
+ul img {
+  align-items: center;
+  margin-top: 30px;
+}
+ul li {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  gap: 22px;
+  padding: 28px 22px;
+}
+ul li a {
+  text-decoration: none;
+  gap: 22px;
+}
+.left-side {
+  margin-left: 400px;
+}
+.left-side i {
+  font-size: 20px;
+  padding: 0 11px;
+  cursor: pointer;
+}
+@media only screen and (max-width: 1050px) {
+  ul {
+    /* Remove 'display: flex;' and 'display: none;' (redundant) */
+    display: none;
+  }
+  ul li {
+    display: block;
+  }
+}
+header {
+  position: relative;
+  height: 88vh;
+  overflow: hidden;
+}
+
+header video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+@media only screen and (max-width: 767px) {
+  header video {
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+header .content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 20px;
+  color: white;
+  font-size: 24px;
+}
+button {
+  box-sizing: border-box;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 22px 0px;
+  border-radius: 11px;
+  width: 100%;
+  border: none;
+  margin-top: 22px;
+}
+button a {
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  padding: 9px 13px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: #03e9f4;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: 0.5s;
+  overflow: hidden;
+  /* margin-right: 40px; */
+}
+button a:hover {
+  background-color: #03e9f4;
+  color: #bb00ff;
+  box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4,
+    0 0 200px #03e9f4;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+}
+button a:first-child {
+  filter: hue-rotate(225deg);
+}
+button a:last-child {
+  filter: hue-rotate(90deg);
+}
+button a span {
+  position: absolute;
+  display: block;
+}
+button a span:nth-child(1) {
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #03e9f4);
+  animation: ark 1s infinite linear;
+}
+@keyframes ark {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+button a span:nth-child(3) {
+  bottom: 0%;
+  right: 0%;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(270deg, transparent, #03e9f4);
+  animation: ark2 1s infinite linear;
+  animation-delay: 0.5s;
+}
+@keyframes ark2 {
+  0% {
+    right: -100%;
+  }
+  100% {
+    right: 100%;
+  }
+}
+button a span:nth-child(2) {
+  top: -100%;
+  right: 0%;
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #03e9f4);
+  animation: ark1 1s infinite linear;
+  animation-delay: 0.25s;
+}
+@keyframes ark1 {
+  0% {
+    top: -100%;
+  }
+  100% {
+    top: 100%;
+  }
+}
+button a span:nth-child(4) {
+  bottom: -100%;
+  left: 0%;
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #03e9f4);
+  animation: ark3 1s infinite linear;
+  animation-delay: 0.75s;
+}
+@keyframes ark3 {
+  0% {
+    bottom: -100%;
+  }
+  100% {
+    bottom: 100%;
+  }
+}
+
+#boxes {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.card {
+  width: 18rem;
+  padding: 22px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+  max-width: 100%;
+  height: auto;
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.card-text {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.card-body button a {
+  text-decoration: none;
+  color: #fff;
+  background-color: #0077FF;
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: inline-block;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.card-body button a:hover {
+  background-color: white;
+  color: #0055CC;
+}
+
+
+#section2 {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+#section2 > h1 {
+  align-items: center;
+  justify-content: center;
+  margin-top: 33px;
+  margin-bottom: 22px;
+  font-size: 44px;
+  font-family: "Poppins", sans-serif;
+}
+label {
+  display: inline-block;
+  width: 30px;
+}
+
+.fa-search {
+  font-size: 20px;
+  color: #555;
+  cursor: pointer;
+  /* border: 1px solid gray; */
+  margin-left: -113px;
+}
+input {
+  font-size: 22px;
+  width: 50%;
+  margin-top: 22px;
+  padding: 12px 22px;
+  border-radius: 22px;
+  /* border: none; */
+}
+
+#form {
+  list-style: none;
+  display: flex;
+  margin-top: 22px;
+  align-items: center;
+  justify-content: center;
+  /* font-size: 22px; */
+  /* border-radius: 21px; */
+}
+#form1 {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* font-size: 22px; */
+  margin-bottom: 50px;
+  /* border-radius: 11px; */
+}
+#btn1,
+#btn2,
+#btn3,
+#btn4,
+#btn5,
+#btn6,
+#btn7 {
+  border-radius: 11px;
+  width: 14%;
+  font-size: 17px;
+  padding: 11px 11px;
+  /* gap: 8px; */
+  margin: 8px 7px;
+}
+
+#section3 {
+  width: 100%;
+  height: 90vh;
+  background-image: url(//images.samsung.com/is/image/samsung/assets/pk/2307/pcd/Galaxy-Z_Curation-KV_PCD_1440x640_pc.jpg?$1440_640_JPG$);
+  background-size: cover;
+}
+#section3 > h2 {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 200px;
+  margin-left: -442px;
+  font-size: 44px;
+  font-family: "Poppins", sans-serif;
+}
+#sum{
+  list-style:none;
+  display: flex;
+  margin-top: -170px;
+  margin-left: 280px;
+  width: 20%;
+}
+#btn11 {
+  font-size: 22px;
+  border-radius: 2px;
+  padding: 9px 9px;
+  background-color: rgb(225, 0, 255);
+  color: white;
+  cursor: pointer;
+  margin-right: 11px;
+}
+#btn11:hover {
+  background-color: white;
+  color: rgb(225, 0, 255);
+}
+#btn12 {
+  font-size: 22px;
+  border-radius: 2px;
+  padding: 9px 9px;
+  background-color: white;
+  color: rgb(225, 0, 255);
+  cursor: pointer;
+}
+#btn12:hover {
+  background-color: rgb(225, 0, 255);
+  color: white;
+}
+
+/* =================================================== */
+
+.product-card {
+  display: flex;
+  margin: 10px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: #f9f9f9;
+}
+
+.product-image {
+  flex: 1;
+  max-width: 216px;
+  margin-right: 20px;
+}
+
+.product-image img {
+  max-width: 100%;
+}
+
+.product-details {
+  flex: 2;
+}
+
+.product-name-text {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.color-chip label {
+  display: inline-block;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.capacity-chip label {
+  display: inline-block;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.price-current {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0077FF;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.cta-button:hover {
+  background-color: white;
+  color: #0055CC;
+}
+
+
+/* ======================================================================== */
+
+.product-card {
+  display: flex;
+  margin: 10px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: #f9f9f9;
+}
+
+.product-image {
+  flex: 1;
+  max-width: 216px;
+  margin-right: 20px;
+}
+
+.product-image img {
+  max-width: 100%;
+}
+
+.product-details {
+  flex: 2;
+}
+
+.product-name-text {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.price-current {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0077FF;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.cta-button:hover {
+  background-color: white;
+  color: #0055CC;
+}
+
+/* ============================================================= */
+
+.product-card3 {
+  display: flex;
+  margin: 10px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: -110px;
+  background-color: #f9f9f9;
+}
+
+.product-image {
+  flex: 1;
+  max-width: 216px;
+  margin-right: 20px;
+  position: relative;
+}
+
+.image-preview {
+  max-width: 100%;
+}
+
+.product-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #0077FF;
+  color: #fff;
+  padding: 5px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.product-details {
+  flex: 2;
+}
+
+.product-name-text {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.price-current {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0077FF;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.cta-button:hover {
+  background-color: white;
+  color: #0055CC;
+}
+
+/* =========================================================== */
+
+.product-card4 {
+  display: flex;
+  margin: 0px 10px;
+  margin-top: 120px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: #f9f9f9;
+}
+
+.product-image {
+  flex: 1;
+  max-width: 216px;
+  margin-right: 20px;
+  position: relative;
+}
+
+.image-preview {
+  max-width: 100%;
+}
+
+.product-details {
+  flex: 2;
+}
+
+.product-name-text {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.price-current {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0077FF;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.cta-button:hover {
+  background-color: white;
+  color: #0055CC;
+}
+ 
+
+/* ================================================================== */
+
+#back{
+  width: 100vw;
+  height: 100vh;
+
+}
+
+/* ========================================================== */
+
+footer{
+  /* background-color: #555; */
+  color: black;
+  font-size: 22px;
+  font-family: 'poppins';
+  text-align: center;
+}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Slider Example</title>
+</head>
+<body>
+    <label for="slider">Select a value:</label>
+    <input type="range" id="slider" name="slider" min="0" max="100" value="50">
+    
+    <p>Selected value: <span id="sliderValue">50</span></p>
+
+    <script>
+        const slider = document.getElementById("slider");
+        const sliderValue = document.getElementById("sliderValue");
+
+        // Update the displayed value when the slider is moved
+        slider.addEventListener("input", function() {
+            sliderValue.textContent = slider.value;
+        });
+    </script>
+</body>
+</html>
